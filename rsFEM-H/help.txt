@@ -1,0 +1,46 @@
+For alpha = 1 configuration, following parameters are valid.#
+#
+#
+E = 8 ; % 12 is good up to L=50 but 8 is good with 30 #
+p = 6 ; % Lagrange element polynomial order p#
+GQ = p+3 ; % choose largest possible to minimize influence#
+n = 2 ; % Mesh parameter#
+L = 30 ; %  30 is good (50 needs 12 elements)#
+LLQ = 110 ; % 50 74 86 110 146 170  (min 74 for 8 elements and 86 for 9: choose 110)#
+r1 = 10 ; % large enough for perturbation to be felt#
+r2 = r1+9 ; % larger than r1 but smaller than L for BCs to make sense#
+potential_multiplier = 0.04; % if delta E = -2.25 * eps^2 rule does not apply for a given potential_multiplier, this value must be lowered.#
+potential_orbital = 3 ; % Ranges from 1 to (L_potential^2) Y00 = 1, Y1-1 = 2, Y10 = 3, Y11 = 4, Y2-2 = 5 ...#
+#
+#
+For alpha = 0 configuration, following parameters are valid.#
+#
+E = 8 ; % 12 is good up to L=50 but 8 is good with 30 #
+p = 6 ; % Lagrange element polynomial order p#
+GQ = p+3 ; % choose largest possible to minimize influence#
+n = 2 ; % Mesh parameter#
+L = 30;     %  30 is good (50 needs 12 elements)#
+LLQ = 110; % 50 74 86 110 146 170  (min 74 for 8 and 86 for 9: choose 110)#
+r1 = 13 ; % large enough for perturbation to be felt#
+r2 = r1+9 ; % larger than r1 but smaller than L for BCs to make sense#
+potential_multiplier = 0.1; % If delta E = -0.5 * eps^2 rule does not apply for a given potential_multiplier, this value must be lowered.#
+potential_orbital = 3 ; % Ranges from 1 to (L_potential^2) Y00 = 1, Y1-1 = 2, Y10 = 3, Y11 = 4, Y2-2 = 5 ...#
+#
+#
+For alpha = -1 configuration, following parameters are valid.#
+#
+E = 8 ; % 12 is good up to L=50 but 8 is good with 30 #
+p = 6 ; % Lagrange element polynomial order p#
+GQ = p+3 ; % choose largest possible to minimize influence#
+n = 2 ; % Mesh parameter#
+L = 30;     %  30 is good (50 needs 12 elements)#
+LLQ = 110; % 50 74 86 110 146 170  (min 74 for 8 and 86 for 9: choose 110)#
+r1 = 13 ; % large enough for perturbation to be felt#
+r2 = r1+9 ; % larger than r1 but smaller than L for BCs to make sense#
+potential_multiplier = 0.001; % If delta E = -0.263289 * eps^2 rule does not apply for a given potential_multiplier, this value must be lowered.#
+potential_orbital = 3 ; % Ranges from 1 to (L_potential^2) Y00 = 1, Y1-1 = 2, Y10 = 3, Y11 = 4, Y2-2 = 5 ...#
+
+
+To use density plotting feature, #
+1. Enable density_plot_flag by assigning 1 during input phase#
+2. Run densityPlot.m. The default code provides a density plot of the atom under investigation by cutting at x = 0 plane.#

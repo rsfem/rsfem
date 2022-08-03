@@ -1,0 +1,2 @@
+rsFEM-H is a software for solving the Schrödinger equation for the hydrogen atom in an aspherical external field.
+For explanations regarding input parameters inside the multi_output_synth, call inputs_help from MATLAB command window.

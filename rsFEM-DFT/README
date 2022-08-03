@@ -1,0 +1,2 @@
+rsFEM-DFT is a software for aspherical atomic Kohn-Sham DFT calculations with all-electron and pseudopotential capability.
+For explanations regarding input parameters inside the multi_output_synth, call inputs_help from MATLAB command window.

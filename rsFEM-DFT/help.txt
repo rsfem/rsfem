@@ -1,0 +1,16 @@
+E_l : number of elements#
+p_l : polynomial order#
+F_l : magnitude of external potential field#
+L_poisson_l : Poisson problem orbital quantum number limit plus 1#
+L_cutoff_l :  Eigenvalue problem orbital quantum number limit plus 1#
+LLQ_l : Lebedev Laikov quadrature discretization#
+mp_l : orbital that is affected by external field. first row is Y10, second row is Y2-1, third row is Y33#
+conf : see below table#
+1 0 0 All electron LDA#
+1 1 1 Pseudo-potential LDA#
+2 0 0 All electron GGA#
+2 1 1 Pseudo-potential GGA#
+
+To use density plotting feature, #
+1. Enable density_plot_flag by assigning 1 during input phase#
+2. Run densityPlot.m. The default code provides a density plot of the atom under investigation by cutting at x = 0 plane.#
