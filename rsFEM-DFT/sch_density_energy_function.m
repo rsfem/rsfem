@@ -3,6 +3,10 @@
 % See the file COPYING for license details.
 
 function [Res2 Clm_m density thetas phis]= sch_density_energy_function(E_l,L_cutoff_l,F_l,p_l,mp_l,LLQ_l,conf,density_plot_flag)
+density = cell(length(E_l));
+r_on_ip = cell(length(E_l));
+thetas = cell(length(E_l));
+phis = cell(length(E_l));
 for m= 1:length(E_l)
     fprintf(" Test =\n\n       %d\n\n ", m)
         tic
@@ -174,10 +178,6 @@ for m= 1:length(E_l)
             display("Problem unconverged.")
         end
     end
-    density = cell(m);
-    r_on_ip = cell(m);
-    thetas = cell(m);
-    phis = cell(m);
     if density_plot_flag == 1
         [density{m},r_on_ip{m},thetas{m},phis{m}] = densityWithoutDFT(E,N,GQ,value_PHI,value_diff_PHI,coord,Clm,connectivity,NumElmNods,LLQ,L_cutoff,fractional_occupancy);
         save('data_for_plot.mat');
